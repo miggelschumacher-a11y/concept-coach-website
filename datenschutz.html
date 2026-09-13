@@ -369,193 +369,251 @@
     .page { padding: 2rem 1.1rem 4rem; }
     body { font-size: 16px; }
   }
+
+  .topbar-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .lang-switch select {
+    background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 0.4rem;
+    font-family: var(--font-display); font-size: 0.85rem; padding: 0.4rem 0.6rem; cursor: pointer;
+  }
+  .lang-switch select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 </style>
 </head>
 <body>
 
 <div class="page">
   <header class="hero">
-    <div class="brandrow">
-      <a href="index.html" style="display:flex;align-items:center;gap:0.6rem;color:inherit;text-decoration:none;">
-        <span class="brandmark" aria-hidden="true">C</span>
-        Concept Coach
-      </a>
+    <div class="topbar-row">
+      <div class="brandrow">
+        <a href="index.html" style="display:flex;align-items:center;gap:0.6rem;color:inherit;text-decoration:none;">
+          <span class="brandmark" aria-hidden="true">C</span>
+          Concept Coach
+        </a>
+      </div>
+      <label class="lang-switch" aria-label="Sprache w&auml;hlen">
+        <span class="visually-hidden" data-i18n="nav.langLabel">Sprache</span>
+        <select id="langSelect"></select>
+      </label>
     </div>
-    <span class="eyebrow">Rechtliches</span>
-    <h1>Datenschutzerkl&auml;rung</h1>
+    <span class="eyebrow" data-i18n="priv.eyebrow">Rechtliches</span>
+    <h1 data-i18n="priv.title">Datenschutzerkl&auml;rung</h1>
     <div class="meta-line">
-      <span>Stand: 13. September 2026</span>
-      <span>Gilt f&uuml;r die Android-App &bdquo;Concept Coach&ldquo; (CoCo)</span>
+      <span data-i18n="priv.meta.date">Stand: 13. September 2026</span>
+      <span data-i18n="priv.meta.app">Gilt f&uuml;r die Android-App &bdquo;Concept Coach&ldquo; (CoCo)</span>
     </div>
 
     <div class="summary-card">
-      <h2>Kurz zusammengefasst</h2>
+      <h2 data-i18n="priv.summary.h">Kurz zusammengefasst</h2>
       <ul>
-        <li>Deine Trainingsdaten (Pl&auml;ne, Einheiten, S&auml;tze, Ausr&uuml;stung) bleiben <strong>ausschlie&szlig;lich auf deinem Ger&auml;t</strong> &ndash; es gibt kein Nutzerkonto und keine Cloud-Synchronisierung.</li>
-        <li>Wir binden <strong>keine Werbung</strong> und <strong>keine Analyse-/Tracking-Dienste</strong> ein.</li>
-        <li>Der Pausen-Gong nutzt lokale Benachrichtigungen &ndash; daf&uuml;r verl&auml;sst nichts dein Ger&auml;t.</li>
-        <li>Nur bei einem <strong>Pro-Kauf/Abo</strong> werden Kaufdaten &uuml;ber RevenueCat und Google Play verarbeitet.</li>
+        <li data-i18n="priv.summary.li1">Deine Trainingsdaten (Pl&auml;ne, Einheiten, S&auml;tze, Ausr&uuml;stung) bleiben <strong>ausschlie&szlig;lich auf deinem Ger&auml;t</strong> &ndash; es gibt kein Nutzerkonto und keine Cloud-Synchronisierung.</li>
+        <li data-i18n="priv.summary.li2">Wir binden <strong>keine Werbung</strong> und <strong>keine Analyse-/Tracking-Dienste</strong> ein.</li>
+        <li data-i18n="priv.summary.li3">Der Pausen-Gong nutzt lokale Benachrichtigungen &ndash; daf&uuml;r verl&auml;sst nichts dein Ger&auml;t.</li>
+        <li data-i18n="priv.summary.li4">Nur bei einem <strong>Pro-Kauf/Abo</strong> werden Kaufdaten &uuml;ber RevenueCat und Google Play verarbeitet.</li>
       </ul>
     </div>
   </header>
 
   <details class="toc-mobile">
-    <summary>Inhaltsverzeichnis</summary>
+    <summary data-i18n="priv.toc.mobileLabel">Inhaltsverzeichnis</summary>
     <nav>
-      <a href="#verantwortlicher">1. Verantwortlicher</a>
-      <a href="#trainingsdaten">2. Trainingsdaten</a>
-      <a href="#benachrichtigungen">3. Benachrichtigungen</a>
-      <a href="#kaeufe">4. K&auml;ufe &amp; Abonnements</a>
-      <a href="#playstore">5. Daten durch Google Play</a>
-      <a href="#rechtsgrundlagen">6. Rechtsgrundlagen</a>
-      <a href="#speicherdauer">7. Speicherdauer &amp; L&ouml;schung</a>
-      <a href="#rechte">8. Deine Rechte</a>
-      <a href="#kinder">9. Kinder &amp; Jugendliche</a>
-      <a href="#aenderungen">10. &Auml;nderungen</a>
-      <a href="#kontakt">11. Kontakt</a>
+      <a href="#verantwortlicher" data-i18n="priv.toc.1">1. Verantwortlicher</a>
+      <a href="#trainingsdaten" data-i18n="priv.toc.2">2. Trainingsdaten</a>
+      <a href="#benachrichtigungen" data-i18n="priv.toc.3">3. Benachrichtigungen</a>
+      <a href="#kaeufe" data-i18n="priv.toc.4">4. K&auml;ufe &amp; Abonnements</a>
+      <a href="#playstore" data-i18n="priv.toc.5">5. Daten durch Google Play</a>
+      <a href="#rechtsgrundlagen" data-i18n="priv.toc.6">6. Rechtsgrundlagen</a>
+      <a href="#speicherdauer" data-i18n="priv.toc.7">7. Speicherdauer &amp; L&ouml;schung</a>
+      <a href="#rechte" data-i18n="priv.toc.8">8. Deine Rechte</a>
+      <a href="#kinder" data-i18n="priv.toc.9">9. Kinder &amp; Jugendliche</a>
+      <a href="#aenderungen" data-i18n="priv.toc.10">10. &Auml;nderungen</a>
+      <a href="#kontakt" data-i18n="priv.toc.11">11. Kontakt</a>
     </nav>
   </details>
 
   <div class="layout">
-    <nav class="toc desktop" aria-label="Inhaltsverzeichnis">
-      <span class="toc-label">Inhalt</span>
-      <a href="#verantwortlicher">1. Verantwortlicher</a>
-      <a href="#trainingsdaten">2. Trainingsdaten</a>
-      <a href="#benachrichtigungen">3. Benachrichtigungen</a>
-      <a href="#kaeufe">4. K&auml;ufe &amp; Abonnements</a>
-      <a href="#playstore">5. Daten durch Google Play</a>
-      <a href="#rechtsgrundlagen">6. Rechtsgrundlagen</a>
-      <a href="#speicherdauer">7. Speicherdauer &amp; L&ouml;schung</a>
-      <a href="#rechte">8. Deine Rechte</a>
-      <a href="#kinder">9. Kinder &amp; Jugendliche</a>
-      <a href="#aenderungen">10. &Auml;nderungen</a>
-      <a href="#kontakt">11. Kontakt</a>
+    <nav class="toc desktop" data-i18n-attr="aria-label:priv.ariaToc" aria-label="Inhaltsverzeichnis">
+      <span class="toc-label" data-i18n="priv.toc.label">Inhalt</span>
+      <a href="#verantwortlicher" data-i18n="priv.toc.1">1. Verantwortlicher</a>
+      <a href="#trainingsdaten" data-i18n="priv.toc.2">2. Trainingsdaten</a>
+      <a href="#benachrichtigungen" data-i18n="priv.toc.3">3. Benachrichtigungen</a>
+      <a href="#kaeufe" data-i18n="priv.toc.4">4. K&auml;ufe &amp; Abonnements</a>
+      <a href="#playstore" data-i18n="priv.toc.5">5. Daten durch Google Play</a>
+      <a href="#rechtsgrundlagen" data-i18n="priv.toc.6">6. Rechtsgrundlagen</a>
+      <a href="#speicherdauer" data-i18n="priv.toc.7">7. Speicherdauer &amp; L&ouml;schung</a>
+      <a href="#rechte" data-i18n="priv.toc.8">8. Deine Rechte</a>
+      <a href="#kinder" data-i18n="priv.toc.9">9. Kinder &amp; Jugendliche</a>
+      <a href="#aenderungen" data-i18n="priv.toc.10">10. &Auml;nderungen</a>
+      <a href="#kontakt" data-i18n="priv.toc.11">11. Kontakt</a>
     </nav>
 
     <main>
       <section class="clause" id="verantwortlicher">
         <span class="clause-number">01</span>
-        <h2 class="clause-title">Verantwortlicher</h2>
-        <p>Verantwortlich f&uuml;r die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+        <h2 class="clause-title" data-i18n="priv.s1.title">Verantwortlicher</h2>
+        <p data-i18n="priv.s1.intro">Verantwortlich f&uuml;r die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
         <div class="databox">
-          <p><strong>Concept Coach</strong><br>
+          <p data-i18n="priv.s1.boxHtml"><strong>Concept Coach</strong><br>
           Kontakt f&uuml;r Datenschutzanfragen: <a href="mailto:miggel.schumacher@gmail.com">miggel.schumacher@gmail.com</a></p>
         </div>
-        <p class="muted">Concept Coach ist ein Einzelentwickler-Projekt. Ein gesondertes Impressum kann &ndash; unabh&auml;ngig von dieser Datenschutzerkl&auml;rung &ndash; zus&auml;tzlich erforderlich sein.</p>
+        <p class="muted" data-i18n="priv.s1.note">Concept Coach ist ein Einzelentwickler-Projekt. Ein gesondertes Impressum kann &ndash; unabh&auml;ngig von dieser Datenschutzerkl&auml;rung &ndash; zus&auml;tzlich erforderlich sein.</p>
       </section>
 
       <section class="clause" id="trainingsdaten">
         <span class="clause-number">02</span>
-        <h2 class="clause-title">Trainingsdaten &ndash; bleiben auf deinem Ger&auml;t</h2>
-        <p>Concept Coach speichert alle Inhalte, die du in der App anlegst &ndash; Trainingspl&auml;ne, Einheiten, S&auml;tze, Wiederholungen, Gewichte, gesch&auml;tzte Maximalkraftwerte, &Uuml;bungen sowie deine Hantel-/Scheiben-Ausr&uuml;stung &ndash; ausschlie&szlig;lich lokal in einer ger&auml;teeigenen Datenbank (IndexedDB) innerhalb der App.</p>
+        <h2 class="clause-title" data-i18n="priv.s2.title">Trainingsdaten &ndash; bleiben auf deinem Ger&auml;t</h2>
+        <p data-i18n="priv.s2.p1">Concept Coach speichert alle Inhalte, die du in der App anlegst &ndash; Trainingspl&auml;ne, Einheiten, S&auml;tze, Wiederholungen, Gewichte, gesch&auml;tzte Maximalkraftwerte, &Uuml;bungen sowie deine Hantel-/Scheiben-Ausr&uuml;stung &ndash; ausschlie&szlig;lich lokal in einer ger&auml;teeigenen Datenbank (IndexedDB) innerhalb der App.</p>
         <div class="databox">
-          <div class="databox-head"><strong>Trainings-, Plan- und Ausr&uuml;stungsdaten</strong><span class="tag local">Nur lokal</span></div>
-          <p>Diese Daten werden nicht an uns, an Google oder an sonstige Dritte &uuml;bertragen. Es gibt kein Nutzerkonto, keinen Login und keine Cloud-Synchronisierung. Wir haben technisch keinen Zugriff auf diese Daten.</p>
+          <div class="databox-head"><strong data-i18n="priv.s2.boxHead">Trainings-, Plan- und Ausr&uuml;stungsdaten</strong><span class="tag local" data-i18n="priv.tag.local">Nur lokal</span></div>
+          <p data-i18n="priv.s2.boxP">Diese Daten werden nicht an uns, an Google oder an sonstige Dritte &uuml;bertragen. Es gibt kein Nutzerkonto, keinen Login und keine Cloud-Synchronisierung. Wir haben technisch keinen Zugriff auf diese Daten.</p>
         </div>
-        <p>Wenn du die App deinstallierst oder ihre Daten in den Ger&auml;teeinstellungen l&ouml;schst, werden diese Informationen unwiderruflich entfernt.</p>
+        <p data-i18n="priv.s2.p2">Wenn du die App deinstallierst oder ihre Daten in den Ger&auml;teeinstellungen l&ouml;schst, werden diese Informationen unwiderruflich entfernt.</p>
       </section>
 
       <section class="clause" id="benachrichtigungen">
         <span class="clause-number">03</span>
-        <h2 class="clause-title">Pausen-Timer &amp; Benachrichtigungen</h2>
-        <p>Der Pausen-Timer kann einen Gong-Ton &uuml;ber eine lokale Ger&auml;te-Benachrichtigung ausl&ouml;sen, damit er auch dann p&uuml;nktlich ertönt, wenn der Bildschirm gesperrt ist. Daf&uuml;r fragt die App auf Android 13 und neuer die Berechtigung <code>POST_NOTIFICATIONS</code> ab.</p>
+        <h2 class="clause-title" data-i18n="priv.s3.title">Pausen-Timer &amp; Benachrichtigungen</h2>
+        <p data-i18n="priv.s3.p1">Der Pausen-Timer kann einen Gong-Ton &uuml;ber eine lokale Ger&auml;te-Benachrichtigung ausl&ouml;sen, damit er auch dann p&uuml;nktlich ertönt, wenn der Bildschirm gesperrt ist. Daf&uuml;r fragt die App auf Android 13 und neuer die Berechtigung <code>POST_NOTIFICATIONS</code> ab.</p>
         <div class="databox">
-          <div class="databox-head"><strong>Lokale Benachrichtigungen</strong><span class="tag local">Nur lokal</span></div>
-          <p>Die Benachrichtigung wird ausschlie&szlig;lich auf deinem Ger&auml;t geplant und ausgel&ouml;st. Es findet keine &Uuml;bertragung an einen Server statt, weder von uns noch von Google (kein Push-Dienst).</p>
+          <div class="databox-head"><strong data-i18n="priv.s3.boxHead">Lokale Benachrichtigungen</strong><span class="tag local" data-i18n="priv.tag.local">Nur lokal</span></div>
+          <p data-i18n="priv.s3.boxP">Die Benachrichtigung wird ausschlie&szlig;lich auf deinem Ger&auml;t geplant und ausgel&ouml;st. Es findet keine &Uuml;bertragung an einen Server statt, weder von uns noch von Google (kein Push-Dienst).</p>
         </div>
-        <p>Du kannst die Berechtigung jederzeit in den Android-Systemeinstellungen der App widerrufen; der Gong f&auml;llt dann ggf. weg, sofern die App im Hintergrund oder bei gesperrtem Bildschirm ist.</p>
+        <p data-i18n="priv.s3.p2">Du kannst die Berechtigung jederzeit in den Android-Systemeinstellungen der App widerrufen; der Gong f&auml;llt dann ggf. weg, sofern die App im Hintergrund oder bei gesperrtem Bildschirm ist.</p>
       </section>
 
       <section class="clause" id="kaeufe">
         <span class="clause-number">04</span>
-        <h2 class="clause-title">K&auml;ufe &amp; Abonnements (Pro-Funktionen)</h2>
-        <p>Einzelne Zusatzfunktionen (&bdquo;Pro&ldquo;) k&ouml;nnen &uuml;ber einen In-App-Kauf oder ein Abonnement freigeschaltet werden. Die Zahlungsabwicklung erfolgt &uuml;ber <strong>Google Play Billing</strong>; f&uuml;r die Verwaltung der Kauf- und Abo-Berechtigung nutzen wir den Dienst <strong>RevenueCat</strong> (RevenueCat, Inc., USA).</p>
+        <h2 class="clause-title" data-i18n="priv.s4.title">K&auml;ufe &amp; Abonnements (Pro-Funktionen)</h2>
+        <p data-i18n="priv.s4.p1">Einzelne Zusatzfunktionen (&bdquo;Pro&ldquo;) k&ouml;nnen &uuml;ber einen In-App-Kauf oder ein Abonnement freigeschaltet werden. Die Zahlungsabwicklung erfolgt &uuml;ber <strong>Google Play Billing</strong>; f&uuml;r die Verwaltung der Kauf- und Abo-Berechtigung nutzen wir den Dienst <strong>RevenueCat</strong> (RevenueCat, Inc., USA).</p>
         <div class="databox">
-          <div class="databox-head"><strong>Google Play Billing</strong><span class="tag third-party">Drittanbieter</span></div>
-          <p>Google verarbeitet die eigentliche Zahlung als eigener Verantwortlicher. Zahlungsdaten (z. B. Zahlungsmittel) laufen ausschlie&szlig;lich &uuml;ber Google, nicht &uuml;ber uns. Es gilt die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von Google</a>.</p>
+          <div class="databox-head"><strong data-i18n="priv.s4.box1Head">Google Play Billing</strong><span class="tag third-party" data-i18n="priv.tag.thirdparty">Drittanbieter</span></div>
+          <p data-i18n="priv.s4.box1P">Google verarbeitet die eigentliche Zahlung als eigener Verantwortlicher. Zahlungsdaten (z. B. Zahlungsmittel) laufen ausschlie&szlig;lich &uuml;ber Google, nicht &uuml;ber uns. Es gilt die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von Google</a>.</p>
         </div>
         <div class="databox">
-          <div class="databox-head"><strong>RevenueCat</strong><span class="tag third-party">Drittanbieter</span></div>
-          <p>RevenueCat erh&auml;lt eine anonyme, ger&auml;tebezogene Kennung sowie Kauf-/Abo-Transaktionsdaten (z. B. Produkt-ID, Kaufdatum, Status), um deinen Pro-Status zu verwalten und ger&auml;te&uuml;bergreifend wiederherstellbar zu machen. Es werden keine Namen, E-Mail-Adressen oder sonstigen direkt identifizierenden Angaben von uns an RevenueCat &uuml;bermittelt. Es gilt die <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von RevenueCat</a>.</p>
+          <div class="databox-head"><strong data-i18n="priv.s4.box2Head">RevenueCat</strong><span class="tag third-party" data-i18n="priv.tag.thirdparty">Drittanbieter</span></div>
+          <p data-i18n="priv.s4.box2P">RevenueCat erh&auml;lt eine anonyme, ger&auml;tebezogene Kennung sowie Kauf-/Abo-Transaktionsdaten (z. B. Produkt-ID, Kaufdatum, Status), um deinen Pro-Status zu verwalten und ger&auml;te&uuml;bergreifend wiederherstellbar zu machen. Es werden keine Namen, E-Mail-Adressen oder sonstigen direkt identifizierenden Angaben von uns an RevenueCat &uuml;bermittelt. Es gilt die <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von RevenueCat</a>.</p>
         </div>
-        <p>Die App ben&ouml;tigt hierf&uuml;r eine Internetverbindung (Android-Berechtigung <code>INTERNET</code>); au&szlig;erhalb des Kauf-/Abo-Vorgangs findet keine Datenverbindung durch die App statt.</p>
+        <p data-i18n="priv.s4.p2">Die App ben&ouml;tigt hierf&uuml;r eine Internetverbindung (Android-Berechtigung <code>INTERNET</code>); au&szlig;erhalb des Kauf-/Abo-Vorgangs findet keine Datenverbindung durch die App statt.</p>
       </section>
 
       <section class="clause" id="playstore">
         <span class="clause-number">05</span>
-        <h2 class="clause-title">Automatisch durch Google Play erhobene Daten</h2>
-        <p>Unabh&auml;ngig von der App selbst erhebt Google beim Vertrieb &uuml;ber den Play Store technische Daten (z. B. App-Version, Ger&auml;temodell, Absturzberichte, Installations- und Nutzungsstatistiken auf Store-Ebene). Diese Verarbeitung erfolgt durch Google als eigenen Verantwortlichen im Rahmen der Google-Play-Nutzungsbedingungen und ist nicht Teil dieser Erkl&auml;rung. Details findest du in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von Google</a> sowie im &bdquo;Datensicherheit&ldquo;-Abschnitt des Play-Store-Eintrags.</p>
+        <h2 class="clause-title" data-i18n="priv.s5.title">Automatisch durch Google Play erhobene Daten</h2>
+        <p data-i18n="priv.s5.p1">Unabh&auml;ngig von der App selbst erhebt Google beim Vertrieb &uuml;ber den Play Store technische Daten (z. B. App-Version, Ger&auml;temodell, Absturzberichte, Installations- und Nutzungsstatistiken auf Store-Ebene). Diese Verarbeitung erfolgt durch Google als eigenen Verantwortlichen im Rahmen der Google-Play-Nutzungsbedingungen und ist nicht Teil dieser Erkl&auml;rung. Details findest du in der <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerkl&auml;rung von Google</a> sowie im &bdquo;Datensicherheit&ldquo;-Abschnitt des Play-Store-Eintrags.</p>
       </section>
 
       <section class="clause" id="rechtsgrundlagen">
         <span class="clause-number">06</span>
-        <h2 class="clause-title">Rechtsgrundlagen der Verarbeitung</h2>
+        <h2 class="clause-title" data-i18n="priv.s6.title">Rechtsgrundlagen der Verarbeitung</h2>
         <ul class="plain">
-          <li><strong>Trainingsdaten &amp; Benachrichtigungen:</strong> Diese Daten verlassen dein Ger&auml;t nicht; soweit &uuml;berhaupt eine Verarbeitung im Sinne der DSGVO vorliegt, st&uuml;tzt sie sich auf die Erf&uuml;llung des Nutzungsvertrags mit dir (Art. 6 Abs. 1 lit. b DSGVO) bzw. auf dein berechtigtes Interesse an der Kernfunktion der App.</li>
-          <li><strong>K&auml;ufe/Abonnements:</strong> Vertragserf&uuml;llung (Art. 6 Abs. 1 lit. b DSGVO) f&uuml;r die Bereitstellung der gekauften Funktion sowie berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an Betrugsschutz und Missbrauchspr&auml;vention durch RevenueCat/Google.</li>
+          <li data-i18n="priv.s6.li1"><strong>Trainingsdaten &amp; Benachrichtigungen:</strong> Diese Daten verlassen dein Ger&auml;t nicht; soweit &uuml;berhaupt eine Verarbeitung im Sinne der DSGVO vorliegt, st&uuml;tzt sie sich auf die Erf&uuml;llung des Nutzungsvertrags mit dir (Art. 6 Abs. 1 lit. b DSGVO) bzw. auf dein berechtigtes Interesse an der Kernfunktion der App.</li>
+          <li data-i18n="priv.s6.li2"><strong>K&auml;ufe/Abonnements:</strong> Vertragserf&uuml;llung (Art. 6 Abs. 1 lit. b DSGVO) f&uuml;r die Bereitstellung der gekauften Funktion sowie berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an Betrugsschutz und Missbrauchspr&auml;vention durch RevenueCat/Google.</li>
         </ul>
       </section>
 
       <section class="clause" id="speicherdauer">
         <span class="clause-number">07</span>
-        <h2 class="clause-title">Speicherdauer &amp; L&ouml;schung</h2>
+        <h2 class="clause-title" data-i18n="priv.s7.title">Speicherdauer &amp; L&ouml;schung</h2>
         <ul class="plain">
-          <li><strong>Trainingsdaten:</strong> Bleiben lokal gespeichert, bis du sie in der App selbst l&ouml;schst oder die App deinstallierst.</li>
-          <li><strong>Kauf-/Abodaten:</strong> Werden bei RevenueCat und Google entsprechend deren eigenen Aufbewahrungsfristen gespeichert, i. d. R. solange es f&uuml;r die Vertrags- und Rechnungsabwicklung sowie gesetzliche Aufbewahrungspflichten erforderlich ist.</li>
+          <li data-i18n="priv.s7.li1"><strong>Trainingsdaten:</strong> Bleiben lokal gespeichert, bis du sie in der App selbst l&ouml;schst oder die App deinstallierst.</li>
+          <li data-i18n="priv.s7.li2"><strong>Kauf-/Abodaten:</strong> Werden bei RevenueCat und Google entsprechend deren eigenen Aufbewahrungsfristen gespeichert, i. d. R. solange es f&uuml;r die Vertrags- und Rechnungsabwicklung sowie gesetzliche Aufbewahrungspflichten erforderlich ist.</li>
         </ul>
       </section>
 
       <section class="clause" id="rechte">
         <span class="clause-number">08</span>
-        <h2 class="clause-title">Deine Rechte</h2>
-        <p>Soweit personenbezogene Daten &uuml;ber dich verarbeitet werden (insbesondere im Rahmen von K&auml;ufen/Abos), stehen dir gegen&uuml;ber dem jeweils Verantwortlichen folgende Rechte zu:</p>
+        <h2 class="clause-title" data-i18n="priv.s8.title">Deine Rechte</h2>
+        <p data-i18n="priv.s8.intro">Soweit personenbezogene Daten &uuml;ber dich verarbeitet werden (insbesondere im Rahmen von K&auml;ufen/Abos), stehen dir gegen&uuml;ber dem jeweils Verantwortlichen folgende Rechte zu:</p>
         <table class="rights-table">
           <thead>
-            <tr><th>Recht</th><th>Kurz erkl&auml;rt</th></tr>
+            <tr><th data-i18n="priv.s8.th1">Recht</th><th data-i18n="priv.s8.th2">Kurz erkl&auml;rt</th></tr>
           </thead>
           <tbody>
-            <tr><td>Auskunft</td><td>Erfahren, welche Daten &uuml;ber dich verarbeitet werden</td></tr>
-            <tr><td>Berichtigung</td><td>Unrichtige Daten korrigieren lassen</td></tr>
-            <tr><td>L&ouml;schung</td><td>L&ouml;schung verlangen, soweit keine Aufbewahrungspflicht entgegensteht</td></tr>
-            <tr><td>Einschr&auml;nkung</td><td>Verarbeitung vor&uuml;bergehend einschr&auml;nken lassen</td></tr>
-            <tr><td>Daten&uuml;bertragbarkeit</td><td>Daten in einem g&auml;ngigen Format erhalten</td></tr>
-            <tr><td>Widerspruch</td><td>Der Verarbeitung aus berechtigtem Interesse widersprechen</td></tr>
-            <tr><td>Beschwerde</td><td>Bei einer Datenschutz-Aufsichtsbeh&ouml;rde deiner Wahl</td></tr>
+            <tr><td data-i18n="priv.s8.r1n">Auskunft</td><td data-i18n="priv.s8.r1d">Erfahren, welche Daten &uuml;ber dich verarbeitet werden</td></tr>
+            <tr><td data-i18n="priv.s8.r2n">Berichtigung</td><td data-i18n="priv.s8.r2d">Unrichtige Daten korrigieren lassen</td></tr>
+            <tr><td data-i18n="priv.s8.r3n">L&ouml;schung</td><td data-i18n="priv.s8.r3d">L&ouml;schung verlangen, soweit keine Aufbewahrungspflicht entgegensteht</td></tr>
+            <tr><td data-i18n="priv.s8.r4n">Einschr&auml;nkung</td><td data-i18n="priv.s8.r4d">Verarbeitung vor&uuml;bergehend einschr&auml;nken lassen</td></tr>
+            <tr><td data-i18n="priv.s8.r5n">Daten&uuml;bertragbarkeit</td><td data-i18n="priv.s8.r5d">Daten in einem g&auml;ngigen Format erhalten</td></tr>
+            <tr><td data-i18n="priv.s8.r6n">Widerspruch</td><td data-i18n="priv.s8.r6d">Der Verarbeitung aus berechtigtem Interesse widersprechen</td></tr>
+            <tr><td data-i18n="priv.s8.r7n">Beschwerde</td><td data-i18n="priv.s8.r7d">Bei einer Datenschutz-Aufsichtsbeh&ouml;rde deiner Wahl</td></tr>
           </tbody>
         </table>
-        <p>F&uuml;r Anfragen zu deinen lokal auf dem Ger&auml;t gespeicherten Trainingsdaten kontaktiere uns unter <a href="mailto:miggel.schumacher@gmail.com">miggel.schumacher@gmail.com</a>; f&uuml;r Anfragen zu Kauf-/Abodaten kannst du dich zus&auml;tzlich direkt an RevenueCat oder Google wenden.</p>
+        <p data-i18n="priv.s8.outro">F&uuml;r Anfragen zu deinen lokal auf dem Ger&auml;t gespeicherten Trainingsdaten kontaktiere uns unter <a href="mailto:miggel.schumacher@gmail.com">miggel.schumacher@gmail.com</a>; f&uuml;r Anfragen zu Kauf-/Abodaten kannst du dich zus&auml;tzlich direkt an RevenueCat oder Google wenden.</p>
       </section>
 
       <section class="clause" id="kinder">
         <span class="clause-number">09</span>
-        <h2 class="clause-title">Kinder &amp; Jugendliche</h2>
-        <p>Concept Coach richtet sich nicht gezielt an Kinder unter 16 Jahren und ist nicht speziell auf diese Zielgruppe ausgerichtet. Da keine personenbezogenen Daten an uns &uuml;bermittelt werden, ist auch keine besondere Verarbeitung von Kinderdaten vorgesehen.</p>
+        <h2 class="clause-title" data-i18n="priv.s9.title">Kinder &amp; Jugendliche</h2>
+        <p data-i18n="priv.s9.p1">Concept Coach richtet sich nicht gezielt an Kinder unter 16 Jahren und ist nicht speziell auf diese Zielgruppe ausgerichtet. Da keine personenbezogenen Daten an uns &uuml;bermittelt werden, ist auch keine besondere Verarbeitung von Kinderdaten vorgesehen.</p>
       </section>
 
       <section class="clause" id="aenderungen">
         <span class="clause-number">10</span>
-        <h2 class="clause-title">&Auml;nderungen dieser Erkl&auml;rung</h2>
-        <p>Wir passen diese Datenschutzerkl&auml;rung an, sobald sich der Funktionsumfang der App &auml;ndert (z. B. neue Dienste oder Berechtigungen). Die jeweils aktuelle Fassung ist &uuml;ber diese Seite abrufbar; das Datum oben zeigt den letzten Stand.</p>
+        <h2 class="clause-title" data-i18n="priv.s10.title">&Auml;nderungen dieser Erkl&auml;rung</h2>
+        <p data-i18n="priv.s10.p1">Wir passen diese Datenschutzerkl&auml;rung an, sobald sich der Funktionsumfang der App &auml;ndert (z. B. neue Dienste oder Berechtigungen). Die jeweils aktuelle Fassung ist &uuml;ber diese Seite abrufbar; das Datum oben zeigt den letzten Stand.</p>
       </section>
 
       <section class="clause" id="kontakt" style="border-bottom:none;">
         <span class="clause-number">11</span>
-        <h2 class="clause-title">Kontakt</h2>
+        <h2 class="clause-title" data-i18n="priv.s11.title">Kontakt</h2>
         <div class="contact-card">
           <div>
-            <p style="margin-bottom:0.2rem;"><strong>Fragen zum Datenschutz?</strong></p>
-            <p class="muted" style="margin-bottom:0;">Wir antworten dir gerne pers&ouml;nlich.</p>
+            <p style="margin-bottom:0.2rem;"><strong data-i18n="priv.s11.cardH">Fragen zum Datenschutz?</strong></p>
+            <p class="muted" style="margin-bottom:0;" data-i18n="priv.s11.cardP">Wir antworten dir gerne pers&ouml;nlich.</p>
           </div>
           <a class="btn" href="mailto:miggel.schumacher@gmail.com">miggel.schumacher@gmail.com</a>
         </div>
       </section>
 
-      <footer class="legal-note">
+      <footer class="legal-note" data-i18n="priv.footer">
         Diese Datenschutzerkl&auml;rung wurde nach bestem Wissen auf Basis der tats&auml;chlichen App-Funktionen erstellt, ersetzt aber keine individuelle Rechtsberatung. Bei rechtlichen Unsicherheiten &ndash; etwa zu einem zus&auml;tzlich erforderlichen Impressum &ndash; empfehlen wir die Pr&uuml;fung durch eine:n Rechtsanwalt/Rechtsanw&auml;ltin oder Datenschutzbeauftragte:n.
       </footer>
     </main>
   </div>
 </div>
 
+<script src="i18n.js"></script>
+<script>
+(function () {
+  var langSelect = document.getElementById('langSelect');
+  (window.CC_LANGS || []).forEach(function (l) {
+    var opt = document.createElement('option');
+    opt.value = l; opt.textContent = window.CC_LANG_NAMES[l];
+    langSelect.appendChild(opt);
+  });
+
+  function applyI18n(lang) {
+    if (!window.CC_I18N[lang]) lang = 'en';
+    document.documentElement.lang = lang;
+    var dict = window.CC_I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function (node) {
+      var key = node.getAttribute('data-i18n');
+      if (dict[key] != null) node.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (node) {
+      var spec = node.getAttribute('data-i18n-attr').split(':');
+      if (dict[spec[1]] != null) node.setAttribute(spec[0], dict[spec[1]]);
+    });
+    if (langSelect.value !== lang) langSelect.value = lang;
+    try { localStorage.setItem('cc_lang', lang); } catch (e) {}
+  }
+
+  langSelect.addEventListener('change', function () { applyI18n(langSelect.value); });
+
+  function detectLang() {
+    try {
+      var saved = localStorage.getItem('cc_lang');
+      if (saved && window.CC_LANGS.indexOf(saved) > -1) return saved;
+    } catch (e) {}
+    var browserLangs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < browserLangs.length; i++) {
+      var code = String(browserLangs[i]).slice(0, 2).toLowerCase();
+      if (window.CC_LANGS.indexOf(code) > -1) return code;
+    }
+    return 'en';
+  }
+
+  applyI18n(detectLang());
+})();
+</script>
 </body>
 </html>
