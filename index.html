@@ -227,7 +227,7 @@
 
   /* ---------- Sections ---------- */
   section.block { padding: clamp(3.5rem, 7vw, 5.5rem) 0; border-bottom: 1px solid var(--line); }
-  section.block.alt { background: var(--surface); }
+  section.block.alt, section.block.alt2 { background: var(--surface); }
   .sec-head { max-width: 760px; margin-bottom: clamp(2rem, 4vw, 3rem); }
   .where { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); margin-bottom: .8rem; }
   .where svg { flex: none; }
@@ -306,7 +306,7 @@
   .settings-list dt { font-family: var(--mono); font-size: .76rem; letter-spacing: .04em; color: var(--muted); padding-top: .15rem; }
   .settings-list dd { margin: 0; }
   .chart-box { background: var(--ground); border: 1px solid var(--line); padding: 1rem 1rem .6rem; }
-  section.alt .chart-box { background: var(--ground); }
+  section.alt .chart-box, section.alt2 .chart-box { background: var(--ground); }
   .chart-title { font-family: var(--mono); font-size: .76rem; color: var(--muted); margin-bottom: .4rem; letter-spacing: .02em; }
   .chart-box-image { padding: 1rem; }
   .chart-box-image img { display: block; width: 100%; height: auto; border-radius: 4px; }
@@ -361,7 +361,7 @@
   .muscles { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .3rem; }
   .muscles span { font-size: .82rem; background: var(--chip); border: 1px solid var(--line); padding: .12rem .55rem; border-radius: 3px; }
   .tool { background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); padding: 1.3rem 1.3rem 1.2rem; }
-  section.alt .tool { background: var(--ground); box-shadow: none; }
+  section.alt .tool, section.alt2 .tool { background: var(--ground); box-shadow: none; }
   .tool + .tool { margin-top: 1.25rem; }
   .tool h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: .2rem; }
   .tool .sub { font-size: .88rem; color: var(--muted); margin-bottom: 1rem; }
@@ -372,7 +372,7 @@
     width: 7.5rem; text-align: right; font: 600 1.15rem var(--display); font-variant-numeric: tabular-nums;
     background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: .35rem .55rem;
   }
-  section.alt .field input { background: var(--surface); }
+  section.alt .field input, section.alt2 .field input { background: var(--surface); }
   .orm-out { margin-top: 1rem; display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap; }
   .orm-out b { font-family: var(--display); font-size: 2.2rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
   .orm-out span { font-family: var(--mono); font-size: .8rem; color: var(--muted); }
@@ -471,6 +471,7 @@
       <a href="#plaene" data-i18n="nav.plaene">Pläne</a>
       <a href="#uebungen" data-i18n="nav.uebungen">Übungen</a>
       <a href="#verlauf" data-i18n="nav.verlauf">Verlauf</a>
+      <a href="#kalender" data-i18n="nav.kalender">Kalender</a>
       <a href="#einstellungen" data-i18n="nav.einstellungen">Einstellungen</a>
       <a href="#pro" data-i18n="nav.pro">Pro</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -870,9 +871,9 @@
           <h3 data-i18n="ex.tool2.h">Aufwärm-Rampe</h3>
           <p class="sub" data-i18n="ex.tool2.sub">So legst du sie in der App fest – pro Übung einzeln, hier am Beispiel Kniebeuge bei 100 kg Arbeitsgewicht.</p>
           <div class="ramp-rows" role="img" data-i18n-attr="aria-label:ex.tool2.aria" aria-label="Aufwärm-Rampe wie in der App: Schritt 1 - 40 Prozent, Zielwiederholung 5. Schritt 2 - 60 Prozent, Zielwiederholung 4. Schritt 3 - 80 Prozent, Zielwiederholung 3.">
-            <div class="ramp-row"><span class="ramp-row-index">#1</span><span class="ramp-field-box"><span>%</span><b>40</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Target Rep</span><b>5</b></span></div>
-            <div class="ramp-row"><span class="ramp-row-index">#2</span><span class="ramp-field-box"><span>%</span><b>60</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Target Rep</span><b>4</b></span></div>
-            <div class="ramp-row"><span class="ramp-row-index">#3</span><span class="ramp-field-box"><span>%</span><b>80</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Target Rep</span><b>3</b></span></div>
+            <div class="ramp-row"><span class="ramp-row-index">#1</span><span class="ramp-field-box"><span>%</span><b>40</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Ziel-Wdh.</span><b>5</b></span></div>
+            <div class="ramp-row"><span class="ramp-row-index">#2</span><span class="ramp-field-box"><span>%</span><b>60</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Ziel-Wdh.</span><b>4</b></span></div>
+            <div class="ramp-row"><span class="ramp-row-index">#3</span><span class="ramp-field-box"><span>%</span><b>80</b></span><span class="ramp-field-box"><span data-i18n="ex.tool2.targetRep">Ziel-Wdh.</span><b>3</b></span></div>
           </div>
         </div>
       </div>
@@ -904,6 +905,7 @@
             <li data-i18n="hist.g2.li1">Übung wählen → Gewicht und geschätztes 1RM über alle Einheiten.</li>
             <li data-i18n="hist.g2.li2">Eigenes Diagramm für den Körpergewichts-Verlauf.</li>
             <li data-i18n="hist.g2.li3">„Gewicht doppelt zählen“ wird berücksichtigt – Kurzhantel-Werte zeigen die Gesamtlast.</li>
+            <li data-i18n="hist.g2.li4">Einzelne Einheiten lassen sich per <b>„Keine Statistik“</b> aus den Auswertungen nehmen.</li>
           </ul>
         </div>
         <div class="group">
@@ -918,6 +920,50 @@
 </section>
 
 <!-- ======================= EINSTELLUNGEN ======================= -->
+<section class="block" id="kalender">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="where"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V9h14v10zm0-12H5V5h14v2z"/></svg><span data-i18n="cal.where">In der App: Kalender</span></p>
+      <h2 data-i18n="cal.title">Kalender &amp; Planung</h2>
+      <p data-i18n="cal.intro">Der Kalender zeigt, was du absolviert hast und was als Nächstes ansteht. Mit <b>Pausentagen</b> legst du fest, an welchen Tagen die Einheiten eines Plans liegen sollen – den Rest verteilt CoCo selbst.</p>
+    </div>
+
+    <div class="groups">
+      <div class="group">
+        <h3 data-i18n="cal.g1.h">Der Kalender</h3>
+        <ul>
+          <li data-i18n="cal.g1.li1">Monatsansicht mit drei Zuständen: <b>Absolviert</b>, <b>Geplant</b> und <b>Überfällig</b>.</li>
+          <li data-i18n="cal.g1.li2">Jeder Tag zeigt, wie viele Einheiten auf ihm liegen; ein Tipp öffnet sie.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3><span data-i18n="cal.g2.h">Pausentage</span> <span class="tag pro" data-i18n="prog.tag.pro">Pro</span></h3>
+        <ul>
+          <li data-i18n="cal.g2.li1"><b>Feste Wochentage</b> je Einheit – auch mehrere, etwa Montag und Donnerstag.</li>
+          <li data-i18n="cal.g2.li2"><b>Pausentage zwischen den Einheiten</b>, immer gleich viele.</li>
+          <li data-i18n="cal.g2.li3"><b>Pausentage nach einer bestimmten Einheit</b> – jede Einheit mit eigener Zahl.</li>
+          <li data-i18n="cal.g2.li4"><b>Pausentage nach mehreren Einheiten</b> in Folge, etwa drei Tage Training, ein Tag Pause.</li>
+          <li data-i18n="cal.g2.li5">Startdatum der ersten Einheit im Kalender wählen; die Frage nach dem Schema kommt beim Erzeugen der Einheiten.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 data-i18n="cal.g3.h">Umplanen</h3>
+        <ul>
+          <li data-i18n="cal.g3.li1">Geplanten Tag jederzeit verschieben – die App zeigt dabei, was an diesem Tag schon liegt.</li>
+          <li data-i18n="cal.g3.li2">Folge-Einheiten rücken im Schema automatisch nach.</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 data-i18n="cal.g4.h">Erinnerung</h3>
+        <ul>
+          <li data-i18n="cal.g4.li1">Optionale Benachrichtigung zu einer festen Uhrzeit an jedem Tag mit geplanten Einheiten.</li>
+          <li data-i18n="cal.g4.li2">Läuft lokal auf dem Gerät; die App fragt einmal nach der Erlaubnis für Benachrichtigungen.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="block alt" id="einstellungen">
   <div class="wrap">
     <div class="sec-head">
@@ -933,7 +979,9 @@
           <li data-i18n="set.g1.li1">Gewichtseinheit <b>kg oder lbs</b></li>
           <li data-i18n="set.g1.li2">Datumsformat passend zur Sprache (TT.MM.JJJJ oder MM/TT/JJJJ)</li>
           <li data-i18n="set.g1.li3">Dunkles oder helles Design</li>
-          <li><span data-i18n="set.g1.li4pre">Neun Sprachen:</span>
+          <li data-i18n="set.g1.li5">Bildschirmausrichtung: automatisch, Hochformat oder Querformat</li>
+          <li data-i18n="set.g1.li6">Bildschirm während einer laufenden Einheit anlassen</li>
+          <li><span data-i18n="set.g1.li4pre">19 Sprachen:</span>
             <div class="langs"><span>Deutsch</span><span>English</span><span>Español</span><span>Português</span><span>Italiano</span><span>Nederlands</span><span>Polski</span><span>Русский</span><span>Magyar</span><span>Dansk</span><span>Norsk</span><span>Svenska</span><span>Suomi</span><span>Čeština</span><span>Türkçe</span><span>العربية</span><span>中文</span><span>日本語</span><span>Ελληνικά</span></div>
           </li>
         </ul>
@@ -1005,7 +1053,7 @@
 </section>
 
 <!-- ======================= PRO ======================= -->
-<section class="block" id="pro">
+<section class="block alt2" id="pro">
   <div class="wrap">
     <div class="pro-grid">
       <div class="sec-head" style="margin-bottom:0">
@@ -1023,6 +1071,7 @@
             <tr><td data-i18n="pro.r4">Eigene Trainingspläne</td><td class="lim" data-i18n="pro.r4.free">bis 2</td><td class="lim" data-i18n="pro.r4.pro">unbegrenzt</td></tr>
             <tr><td data-i18n="pro.r5">Doppel-Progression, Wiederholungsziel, Wellen-Progression</td><td class="no">–</td><td class="yes">✓</td></tr>
             <tr><td data-i18n="pro.r6">Scheiben-Rechner (Gewicht &amp; Ausrüstung)</td><td class="no">–</td><td class="yes">✓</td></tr>
+            <tr><td data-i18n="pro.r9">Kalender-Planung mit Pausentagen</td><td class="no">–</td><td class="yes">✓</td></tr>
             <tr><td data-i18n="pro.r7">Sicherung als Datei</td><td class="yes">✓</td><td class="yes">✓</td></tr>
             <tr><td data-i18n="pro.r8">Sicherung über Google Drive</td><td class="no">–</td><td class="yes">✓</td></tr>
           </tbody>
